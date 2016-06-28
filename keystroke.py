@@ -2,7 +2,7 @@ import sys
 import os
 import termios
 import fcntl
-fd = sys.stdin.fielno()
+fd = sys.stdin.fileno()
 oldterm = termios.tcgetattr(fd)
 newattr = termios.tcgetattr(fd)
 newattr[3] = newattr[3] & ~termios.ICANON & ~termios.ECHO
